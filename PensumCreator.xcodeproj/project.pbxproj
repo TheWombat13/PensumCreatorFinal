@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B7356FE12098880100778263 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7356FE02098880100778263 /* AppDelegate.swift */; };
+		B7356FE32098880100778263 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7356FE22098880100778263 /* ViewController.swift */; };
+		B7356FE62098880100778263 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7356FE42098880100778263 /* Main.storyboard */; };
+		B7356FE82098880100778263 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7356FE72098880100778263 /* Assets.xcassets */; };
+		B7356FEB2098880100778263 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7356FE92098880100778263 /* LaunchScreen.storyboard */; };
+		B7356FF62098880100778263 /* PensumCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7356FF52098880100778263 /* PensumCreatorTests.swift */; };
+		B73570012098880100778263 /* PensumCreatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73570002098880100778263 /* PensumCreatorUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B7356FF22098880100778263 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7356FD52098880100778263 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7356FDC2098880100778263;
+			remoteInfo = PensumCreator;
+		};
+		B7356FFD2098880100778263 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7356FD52098880100778263 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7356FDC2098880100778263;
+			remoteInfo = PensumCreator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B7356FDD2098880100778263 /* PensumCreator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PensumCreator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7356FE02098880100778263 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B7356FE22098880100778263 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B7356FE52098880100778263 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B7356FE72098880100778263 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B7356FEA2098880100778263 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B7356FEC2098880100778263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7356FF12098880100778263 /* PensumCreatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PensumCreatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7356FF52098880100778263 /* PensumCreatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PensumCreatorTests.swift; sourceTree = "<group>"; };
+		B7356FF72098880100778263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7356FFC2098880100778263 /* PensumCreatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PensumCreatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B73570002098880100778263 /* PensumCreatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PensumCreatorUITests.swift; sourceTree = "<group>"; };
+		B73570022098880100778263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B7356FDA2098880100778263 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7356FEE2098880100778263 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7356FF92098880100778263 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B7356FD42098880100778263 = {
+			isa = PBXGroup;
+			children = (
+				B7356FDF2098880100778263 /* PensumCreator */,
+				B7356FF42098880100778263 /* PensumCreatorTests */,
+				B7356FFF2098880100778263 /* PensumCreatorUITests */,
+				B7356FDE2098880100778263 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B7356FDE2098880100778263 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7356FDD2098880100778263 /* PensumCreator.app */,
+				B7356FF12098880100778263 /* PensumCreatorTests.xctest */,
+				B7356FFC2098880100778263 /* PensumCreatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7356FDF2098880100778263 /* PensumCreator */ = {
+			isa = PBXGroup;
+			children = (
+				B7356FE02098880100778263 /* AppDelegate.swift */,
+				B7356FE22098880100778263 /* ViewController.swift */,
+				B7356FE42098880100778263 /* Main.storyboard */,
+				B7356FE72098880100778263 /* Assets.xcassets */,
+				B7356FE92098880100778263 /* LaunchScreen.storyboard */,
+				B7356FEC2098880100778263 /* Info.plist */,
+			);
+			path = PensumCreator;
+			sourceTree = "<group>";
+		};
+		B7356FF42098880100778263 /* PensumCreatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				B7356FF52098880100778263 /* PensumCreatorTests.swift */,
+				B7356FF72098880100778263 /* Info.plist */,
+			);
+			path = PensumCreatorTests;
+			sourceTree = "<group>";
+		};
+		B7356FFF2098880100778263 /* PensumCreatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B73570002098880100778263 /* PensumCreatorUITests.swift */,
+				B73570022098880100778263 /* Info.plist */,
+			);
+			path = PensumCreatorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B7356FDC2098880100778263 /* PensumCreator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B73570052098880100778263 /* Build configuration list for PBXNativeTarget "PensumCreator" */;
+			buildPhases = (
+				B7356FD92098880100778263 /* Sources */,
+				B7356FDA2098880100778263 /* Frameworks */,
+				B7356FDB2098880100778263 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PensumCreator;
+			productName = PensumCreator;
+			productReference = B7356FDD2098880100778263 /* PensumCreator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B7356FF02098880100778263 /* PensumCreatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B73570082098880100778263 /* Build configuration list for PBXNativeTarget "PensumCreatorTests" */;
+			buildPhases = (
+				B7356FED2098880100778263 /* Sources */,
+				B7356FEE2098880100778263 /* Frameworks */,
+				B7356FEF2098880100778263 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7356FF32098880100778263 /* PBXTargetDependency */,
+			);
+			name = PensumCreatorTests;
+			productName = PensumCreatorTests;
+			productReference = B7356FF12098880100778263 /* PensumCreatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B7356FFB2098880100778263 /* PensumCreatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B735700B2098880100778263 /* Build configuration list for PBXNativeTarget "PensumCreatorUITests" */;
+			buildPhases = (
+				B7356FF82098880100778263 /* Sources */,
+				B7356FF92098880100778263 /* Frameworks */,
+				B7356FFA2098880100778263 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7356FFE2098880100778263 /* PBXTargetDependency */,
+			);
+			name = PensumCreatorUITests;
+			productName = PensumCreatorUITests;
+			productReference = B7356FFC2098880100778263 /* PensumCreatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B7356FD52098880100778263 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Jonathan Larsen";
+				TargetAttributes = {
+					B7356FDC2098880100778263 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					B7356FF02098880100778263 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B7356FDC2098880100778263;
+					};
+					B7356FFB2098880100778263 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B7356FDC2098880100778263;
+					};
+				};
+			};
+			buildConfigurationList = B7356FD82098880100778263 /* Build configuration list for PBXProject "PensumCreator" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B7356FD42098880100778263;
+			productRefGroup = B7356FDE2098880100778263 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B7356FDC2098880100778263 /* PensumCreator */,
+				B7356FF02098880100778263 /* PensumCreatorTests */,
+				B7356FFB2098880100778263 /* PensumCreatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B7356FDB2098880100778263 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7356FEB2098880100778263 /* LaunchScreen.storyboard in Resources */,
+				B7356FE82098880100778263 /* Assets.xcassets in Resources */,
+				B7356FE62098880100778263 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7356FEF2098880100778263 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7356FFA2098880100778263 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B7356FD92098880100778263 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7356FE32098880100778263 /* ViewController.swift in Sources */,
+				B7356FE12098880100778263 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7356FED2098880100778263 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7356FF62098880100778263 /* PensumCreatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7356FF82098880100778263 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B73570012098880100778263 /* PensumCreatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B7356FF32098880100778263 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7356FDC2098880100778263 /* PensumCreator */;
+			targetProxy = B7356FF22098880100778263 /* PBXContainerItemProxy */;
+		};
+		B7356FFE2098880100778263 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7356FDC2098880100778263 /* PensumCreator */;
+			targetProxy = B7356FFD2098880100778263 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B7356FE42098880100778263 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7356FE52098880100778263 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B7356FE92098880100778263 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7356FEA2098880100778263 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B73570032098880100778263 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B73570042098880100778263 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B73570062098880100778263 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PensumCreator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JAL.PensumCreator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B73570072098880100778263 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PensumCreator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JAL.PensumCreator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B73570092098880100778263 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PensumCreatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JAL.PensumCreatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PensumCreator.app/PensumCreator";
+			};
+			name = Debug;
+		};
+		B735700A2098880100778263 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PensumCreatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JAL.PensumCreatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PensumCreator.app/PensumCreator";
+			};
+			name = Release;
+		};
+		B735700C2098880100778263 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PensumCreatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JAL.PensumCreatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PensumCreator;
+			};
+			name = Debug;
+		};
+		B735700D2098880100778263 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PensumCreatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JAL.PensumCreatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PensumCreator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B7356FD82098880100778263 /* Build configuration list for PBXProject "PensumCreator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B73570032098880100778263 /* Debug */,
+				B73570042098880100778263 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B73570052098880100778263 /* Build configuration list for PBXNativeTarget "PensumCreator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B73570062098880100778263 /* Debug */,
+				B73570072098880100778263 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B73570082098880100778263 /* Build configuration list for PBXNativeTarget "PensumCreatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B73570092098880100778263 /* Debug */,
+				B735700A2098880100778263 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B735700B2098880100778263 /* Build configuration list for PBXNativeTarget "PensumCreatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B735700C2098880100778263 /* Debug */,
+				B735700D2098880100778263 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B7356FD52098880100778263 /* Project object */;
+}
