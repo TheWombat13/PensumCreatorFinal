@@ -10,10 +10,21 @@ import UIKit
 import Firebase
 
 class PensumTableViewController: UITableViewController {
-
+    var ref: DatabaseReference!
+    
+  //  static let kPensumListPath = "LitteraturList"
+  //  static let kPensumListViewControllerSegueIdentifier = "LitteraturTableViewController"
+    
+  //  let PensumReference = Database.database().reference(withPath: kPensumListPath)
+  //  var Pensums = [Pensum]()
+    weak var currentUser = Auth.auth().currentUser
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = Database.database().reference()
+        
+        var items: [Pensum] = []
 
     }
 
