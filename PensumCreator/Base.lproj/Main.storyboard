@@ -57,6 +57,7 @@
                                 <state key="normal" title="Log ind"/>
                                 <connections>
                                     <action selector="login" destination="Lld-Iw-Tfs" eventType="touchUpInside" id="PP3-zt-rly"/>
+                                    <segue destination="zbo-MP-XeY" kind="presentation" id="FPm-U5-h5m"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6H9-dp-6Ll">
@@ -76,7 +77,6 @@
                     <connections>
                         <outlet property="emailTextField" destination="PjH-ro-1ZT" id="NQI-cD-rQ1"/>
                         <outlet property="passwordTextField" destination="1hA-Ya-0b7" id="mPU-79-YPa"/>
-                        <segue destination="u6g-ja-MDc" kind="show" identifier="userLoggedIn" id="ndW-qc-IOo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pm3-wC-viC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -108,18 +108,32 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="vBB-b3-c6O">
-                        <barButtonItem key="leftBarButtonItem" title="log ud" id="oVD-1z-eqO">
-                            <connections>
-                                <action selector="signOut" destination="u6g-ja-MDc" id="Oun-bL-Sf3"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="log ud" id="oVD-1z-eqO"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="RNp-Ae-Zak"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MvU-Xa-Csf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042" y="79"/>
+            <point key="canvasLocation" x="1838" y="78"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WrQ-2B-Oyh">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dTE-5N-R0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zbo-MP-XeY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4gb-h7-qcN">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="u6g-ja-MDc" kind="relationship" relationship="rootViewController" id="vRq-45-eWT"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1041.5999999999999" y="78.260869565217391"/>
         </scene>
     </scenes>
 </document>
