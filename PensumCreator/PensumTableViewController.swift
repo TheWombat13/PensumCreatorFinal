@@ -9,25 +9,76 @@
 import UIKit
 import Firebase
 
+
 class PensumTableViewController: UITableViewController {
     var ref: DatabaseReference!
+    var refHandle: UInt!
+    weak var currentUser = Auth.auth().currentUser
+    var pensums = [Pensum]()
+    //let tasksReference = Database.database().reference()
     
   //  static let kPensumListPath = "LitteraturList"
   //  static let kPensumListViewControllerSegueIdentifier = "LitteraturTableViewController"
     
   //  let PensumReference = Database.database().reference(withPath: kPensumListPath)
   //  var Pensums = [Pensum]()
-    weak var currentUser = Auth.auth().currentUser
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("jeg loader")
         ref = Database.database().reference()
+        fetchPensums()
         
-        var items: [Pensum] = []
-
+      //  ref.observe(.value) { (snapshot) in
+      //      var items: [Pensum] = []
+            
+      //      for item in snapshot.children {
+      //          let pensum = Pensum(snapshot: item as! DataSnapshot)
+      //          items.append(pensum)
+      //      }
+      //      self.pensums = items
+      //      self.tableView.reloadData()
+ 
+ 
+ }
+ 
+ 
+    func fetchPensums() {
+        refHandle = ref.child("Pensums").observe(.childAdded, with: {(snapshot) in
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                print(dictionary )
+                
+                let pensum = Pensum()
+                pensum.setValuesForKeys(dictionary)
+                self.pensums.append(pensum)
+                
+                self.tableView.reloadData()
+                DispatchQueue.main.async {
+                }
+            }
+        })
     }
+    
 
+
+/*
+    func fillPensums() {
+        ref = Database.database().reference()
+        ref.observe(.value) { (snapshot) in
+            var items: [Pensum] = []
+            
+            for item in snapshot.children {
+                let pensum = Pensum(snapshot: item as! DataSnapshot)
+                items.append(pensum)
+            }
+            self.pensums = items
+            self.tableView.reloadData()
+        }
+        
+    }
+*/
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -42,7 +93,7 @@ class PensumTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return pensums.count
     }
     
     @IBAction func signOut(){
@@ -57,15 +108,16 @@ class PensumTableViewController: UITableViewController {
         }
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PensumTableViewCell", for: indexPath)
 
         // Configure the cell...
+        cell.textLabel?.text = pensums[indexPath.row].courseName
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

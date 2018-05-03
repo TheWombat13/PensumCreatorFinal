@@ -6,11 +6,18 @@
 //  Copyright © 2018 Jonathan Larsen. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Firebase
 import FirebaseDatabase
 
 class Pensum: NSObject {
+    
+    var courseName: String?
+    var teacherName: String?
+    var pensumPages: Int?
+
+    /*
+    
     let courseName: String
     let teacherName: String
     let pensumPages: Int
@@ -28,13 +35,13 @@ class Pensum: NSObject {
         pensumPages = snapshotValue["pensumPages"] as! Int
     }
     
-    func toAnyObject() -> Any {
+    func toDirectory() -> Any {
         return [
             "courseName": courseName,
             "teacherName": teacherName,
             "pensumname": pensumPages
         ]
     }
-    
+    */
 }
 
