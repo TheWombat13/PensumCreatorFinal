@@ -101,15 +101,15 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="u6g-ja-MDc" id="5P0-RL-fi6"/>
-                            <outlet property="delegate" destination="u6g-ja-MDc" id="KLP-iF-o3m"/>
-                        </connections>
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="vBB-b3-c6O">
-                        <barButtonItem key="leftBarButtonItem" title="log ud" id="oVD-1z-eqO"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="RNp-Ae-Zak"/>
+                        <barButtonItem key="leftBarButtonItem" title="log ud" id="oVD-1z-eqO">
+                            <connections>
+                                <action selector="signOut" destination="u6g-ja-MDc" id="2lh-p9-OaQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="RNp-Ae-Zak"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>

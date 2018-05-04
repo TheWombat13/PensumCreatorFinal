@@ -19,6 +19,7 @@
 		B735701120988C0100778263 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B735701020988C0100778263 /* LoginViewController.swift */; };
 		B73570172098BEA900778263 /* PensumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73570162098BEA900778263 /* PensumTableViewController.swift */; };
 		B735701B209B862300778263 /* Pensum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B735701A209B862300778263 /* Pensum.swift */; };
+		B735701D209C543C00778263 /* LitteratureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B735701C209C543C00778263 /* LitteratureTableViewController.swift */; };
 		D760B7FDD2EC560EA6003AFC /* Pods_PensumCreatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99DB1828B9C5BDB9D737A838 /* Pods_PensumCreatorTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		B735701020988C0100778263 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B73570162098BEA900778263 /* PensumTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PensumTableViewController.swift; sourceTree = "<group>"; };
 		B735701A209B862300778263 /* Pensum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pensum.swift; sourceTree = "<group>"; };
+		B735701C209C543C00778263 /* LitteratureTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitteratureTableViewController.swift; sourceTree = "<group>"; };
 		C9E67914032C6C0634541F8F /* Pods_PensumCreatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PensumCreatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 				B735701020988C0100778263 /* LoginViewController.swift */,
 				B73570162098BEA900778263 /* PensumTableViewController.swift */,
 				B735701A209B862300778263 /* Pensum.swift */,
+				B735701C209C543C00778263 /* LitteratureTableViewController.swift */,
 			);
 			path = PensumCreator;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				B73570172098BEA900778263 /* PensumTableViewController.swift in Sources */,
 				B7356FE12098880100778263 /* AppDelegate.swift in Sources */,
 				B735701B209B862300778263 /* Pensum.swift in Sources */,
+				B735701D209C543C00778263 /* LitteratureTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

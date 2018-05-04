@@ -12,44 +12,37 @@ import Firebase
 
 class PensumTableViewController: UITableViewController {
     
+    //let ref = Database.database().reference().child("Pensums")
     weak var currentUser = Auth.auth().currentUser
     var pensums = [Pensum]()
     
-    
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("jeg loader")
-       
-        fetchPensums()
-        
+       // fetchPensums()
     }
  
  
+    /*
     func fetchPensums() {
-    
-        Database.database().reference().child("Pensums").observe(.childAdded, with: { (snapshot) in
-            
+        ref.observe(.childAdded, with: { (snapshot) in
             if let dictionary = snapshot.value as? [String: AnyObject] {
                 let pensum = Pensum()
-                pensum.setValuesForKeys(dictionary)
-                print(pensum.courseName as Any, pensum.teacherName as Any, pensum.pensumPages as Any)
- 
+                //pensum.setValuesForKeys(dictionary)
+                pensum.courseName = dictionary["courseName"] as? String
+                pensum.teacherName = dictionary["teacherName"] as? String
+                pensum.teacherName = dictionary["pensumPages"] as? String
+                
+                self.pensums.append(pensum)
+                self.tableView.reloadData()
+                
+                print(pensum.courseName, pensum.teacherName, pensum.pensumPages)
             }
- 
-            
-            
             print("pensum found")
             print(snapshot)
         })
-        
-    
     }
-    
-
-
-
+*/
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -64,7 +57,7 @@ class PensumTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return pensums.count
     }
     
     
@@ -80,18 +73,51 @@ class PensumTableViewController: UITableViewController {
         }
     }
 
-    
+    //TODO create custom cell 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PensumTableViewCell", for: indexPath)
 
+        let pensum = pensums[indexPath.row]
         // Configure the cell...
-        cell.textLabel?.text = "hello"//pensums[indexPath.row].courseName
+        cell.textLabel?.text =  pensum.courseName
+        cell.detailTextLabel?.text = pensum.teacherName
 
         return cell
     }
     
-
+    /*
+    @IBAction func addButtonDidTouch(_ sender: AnyObject) {
+        let alert = UIAlertController(title: "Opret Pensum",
+                                      message: "Add an Item",
+                                      preferredStyle: .alert)
+        
+        let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
+            guard let textField = alert.textFields?.first,
+                let text = textField.text else { return }
+            
+            
+            let pensum = Pensum(courseName: text
+                                       //   addedByUser: self.user.email,
+                                        //  completed: false
+            )
+            
+            let pensumRef = self.ref.child(text.lowercased())
+            
+            pensumRef.setValue(pensum.toAnyObject())
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                         style: .cancel)
+        
+        alert.addTextField()
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
     
+
+*/
     
 
 }
