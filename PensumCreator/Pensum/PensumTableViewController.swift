@@ -14,14 +14,32 @@ class PensumTableViewController: UITableViewController {
     
     //let ref = Database.database().reference().child("Pensums")
     weak var currentUser = Auth.auth().currentUser
-    var pensums = [Pensum]()
-    
+    //var pensums = [Pensum]()
+    var pensums: [Pensum] = []
+    let ref = Database.database().reference(withPath: "Pensums")
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       // fetchPensums()
+        fetchPensums()
+        
     }
- 
+
+    
+    func fetchPensums() {
+        ref.observe(.childAdded, with: { snapshot in
+        var newPensums: [Pensum] = []
+        
+        for child in snapshot.children {
+            if let snapshot = child as? DataSnapshot,
+                let pensum = Pensum(snapshot: snapshot) {
+                newPensums.append(pensum)
+            }
+        }
+        self.pensums = newPensums
+        self.tableView.reloadData()
+            print(snapshot)
+        })
+    }
  
     /*
     func fetchPensums() {
@@ -60,6 +78,15 @@ class PensumTableViewController: UITableViewController {
         return pensums.count
     }
     
+    @IBAction func unwindToPensumTable(segue: UIStoryboardSegue){
+        let AddPensumViewController = segue.source as! AddPensumViewController
+        if let pensum = AddPensumViewController.pensum {
+            pensums.append(pensum)
+            self.tableView.reloadData()
+        }
+
+    }
+    
     
     @IBAction func signOut(){
         if Auth.auth().currentUser != nil {
@@ -85,7 +112,7 @@ class PensumTableViewController: UITableViewController {
         return cell
     }
     
-    /*
+  /*
     @IBAction func addButtonDidTouch(_ sender: AnyObject) {
         let alert = UIAlertController(title: "Opret Pensum",
                                       message: "Add an Item",
@@ -94,21 +121,20 @@ class PensumTableViewController: UITableViewController {
         let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
             guard let textField = alert.textFields?.first,
                 let text = textField.text else { return }
-            
-            
-            let pensum = Pensum(courseName: text
-                                       //   addedByUser: self.user.email,
-                                        //  completed: false
-            )
+           // textField.placeholder = "something"
+        
+    
+            let pensumItem = Pensum.init(courseName: text, teacherName: text, pensumPages: text, completed: false)
             
             let pensumRef = self.ref.child(text.lowercased())
             
-            pensumRef.setValue(pensum.toAnyObject())
+            pensumRef.setValue(pensumItem.toAnyObject())
         }
         
         let cancelAction = UIAlertAction(title: "Cancel",
                                          style: .cancel)
         
+        alert.addTextField()
         alert.addTextField()
         alert.addAction(saveAction)
         alert.addAction(cancelAction)
