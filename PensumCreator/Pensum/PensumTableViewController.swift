@@ -112,38 +112,5 @@ class PensumTableViewController: UITableViewController {
         return cell
     }
     
-  /*
-    @IBAction func addButtonDidTouch(_ sender: AnyObject) {
-        let alert = UIAlertController(title: "Opret Pensum",
-                                      message: "Add an Item",
-                                      preferredStyle: .alert)
-        
-        let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
-            guard let textField = alert.textFields?.first,
-                let text = textField.text else { return }
-           // textField.placeholder = "something"
-        
-    
-            let pensumItem = Pensum.init(courseName: text, teacherName: text, pensumPages: text, completed: false)
-            
-            let pensumRef = self.ref.child(text.lowercased())
-            
-            pensumRef.setValue(pensumItem.toAnyObject())
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel",
-                                         style: .cancel)
-        
-        alert.addTextField()
-        alert.addTextField()
-        alert.addAction(saveAction)
-        alert.addAction(cancelAction)
-        
-        present(alert, animated: true, completion: nil)
-    }
-    
-
-*/
-    
 
 }

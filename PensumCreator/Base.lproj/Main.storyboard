@@ -171,6 +171,7 @@
                                 <rect key="frame" x="139" y="341" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8S-mb-ozx">
@@ -188,7 +189,6 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="NSy-3r-PjJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="99a-7s-tir">
@@ -205,6 +205,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="courseTextField" destination="Ayv-bp-DWL" id="JxV-8w-89U"/>
+                        <outlet property="doneButton" destination="U06-zN-2Ep" id="4Qq-MX-LlH"/>
                         <outlet property="pagesTextField" destination="Ppi-a2-lDh" id="eUp-Qv-Sow"/>
                         <outlet property="teacherTextField" destination="lb1-99-Ca3" id="ssL-tf-9zm"/>
                     </connections>
@@ -217,7 +218,6 @@
         <!--Navigation Controller-->
         <scene sceneID="WrQ-2B-Oyh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dTE-5N-R0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zbo-MP-XeY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4gb-h7-qcN">
@@ -229,6 +229,7 @@
                         <segue destination="u6g-ja-MDc" kind="relationship" relationship="rootViewController" id="vRq-45-eWT"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dTE-5N-R0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1041.5999999999999" y="78.260869565217391"/>
         </scene>

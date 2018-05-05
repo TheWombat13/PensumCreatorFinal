@@ -17,7 +17,7 @@ class AddPensumViewController: UIViewController {
     @IBOutlet weak var teacherTextField: UITextField!
     @IBOutlet weak var pagesTextField: UITextField!
     
-    //@IBOutlet weak var doneButton: UIBarButtonItem!
+    @IBOutlet weak var doneButton: UIBarButtonItem!
     
     var ref: DatabaseReference?
     var pensum: Pensum?
@@ -38,16 +38,19 @@ class AddPensumViewController: UIViewController {
     }
     
     @IBAction func addPensum(_ sender: Any) {
-        ref?.child("Pensums").child("pensum").child("courseName").setValue(courseTextField.text)
-        ref?.child("Pensums").child("pensum").child("teacherName").setValue(teacherTextField.text)
-        ref?.child("Pensums").child("pensum").child("pensumPages").setValue(pagesTextField.text)
-        print(courseTextField.text)
-        print("dobbelt hej")
+        //define a random key to hold the pensum variables
+        let autoId = ref?.child("Pensums").childByAutoId()
+        
+        autoId?.child("courseName").setValue(courseTextField.text)
+        autoId?.child("teacherName").setValue(teacherTextField.text)
+        autoId?.child("pensumPages").setValue(pagesTextField.text)
+      
+        presentingViewController?.dismiss(animated: true, completion: nil)
     }
 
     
 
- /*
+ 
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -63,6 +66,6 @@ class AddPensumViewController: UIViewController {
     }
     
     
- */
+ 
 
 }
