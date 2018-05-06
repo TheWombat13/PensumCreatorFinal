@@ -38,7 +38,7 @@ class AddPensumViewController: UIViewController {
     }
     
     @IBAction func addPensum(_ sender: Any) {
-        //define a random key to hold the pensum variables
+        //defines a random key to hold the pensum variables
         let autoId = ref?.child("Pensums").childByAutoId()
         
         autoId?.child("courseName").setValue(courseTextField.text)
