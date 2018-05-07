@@ -75,22 +75,16 @@ class PensumTableViewController: UITableViewController {
     }
     
     
-
-    //TODO create custom cell 
+    //Custom cell loader
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PensumTableViewCustomCell", for: indexPath)
 
         if let customCell = cell as? PensumTableViewCustomCell {
             let pensum = pensums[indexPath.row]
-            // Configure the cell...
             customCell.courseLabel.text = pensum.courseName
             customCell.teacherLabel.text = pensum.teacherName
             customCell.pagesLabel.text = pensum.pensumPages
-            //cell.textLabel?.text =  pensum.courseName
-            //cell.detailTextLabel?.text = pensum.teacherName
         }
-        
-
         return cell
     }
     

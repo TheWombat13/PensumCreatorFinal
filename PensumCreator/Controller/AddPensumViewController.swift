@@ -11,8 +11,6 @@ import FirebaseDatabase
 
 class AddPensumViewController: UIViewController {
     
-    
-
     @IBOutlet weak var courseTextField: UITextField!
     @IBOutlet weak var teacherTextField: UITextField!
     @IBOutlet weak var pagesTextField: UITextField!
@@ -24,12 +22,8 @@ class AddPensumViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("HEJ")
         ref = Database.database().reference()
-        
-        // Do any additional setup after loading the view.
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -48,9 +42,6 @@ class AddPensumViewController: UIViewController {
         presentingViewController?.dismiss(animated: true, completion: nil)
     }
 
-    
-
- 
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -65,7 +56,4 @@ class AddPensumViewController: UIViewController {
         }
     }
     
- 
- 
-
 }

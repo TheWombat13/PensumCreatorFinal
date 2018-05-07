@@ -358,8 +358,18 @@
                                 <segue destination="UZ4-Mu-uTE" kind="unwind" unwindAction="unwindToLitteratureTableWithSegue:" id="Cie-Ht-Xee"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Ayj-HA-zwf"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Ayj-HA-zwf">
+                            <connections>
+                                <action selector="addLitterature:" destination="nds-mn-apz" id="DN2-sx-dxp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="TextTextField" destination="DH2-wk-iuz" id="iXE-K9-t8S"/>
+                        <outlet property="genreTextField" destination="hlJ-Nw-v2G" id="m6e-3Y-1QY"/>
+                        <outlet property="litteraturePagesTextField" destination="vEJ-xb-y5j" id="wso-Rr-GEm"/>
+                        <outlet property="periodTextField" destination="zWB-zt-w7l" id="ltn-C9-2bl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LkX-IM-rEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="UZ4-Mu-uTE" userLabel="Exit" sceneMemberID="exit"/>
