@@ -1,14 +1,14 @@
 //
-//  TestTableViewController.swift
+//  LitteratureTableViewController.swift
 //  PensumCreator
 //
-//  Created by Jonathan Larsen on 07/05/2018.
+//  Created by Jonathan Larsen on 04/05/2018.
 //  Copyright © 2018 Jonathan Larsen. All rights reserved.
 //
 
 import UIKit
 
-class TestTableViewController: UITableViewController {
+class LitteratureTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +55,7 @@ class TestTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -65,7 +65,7 @@ class TestTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    
+    */
 
     /*
     // Override to support rearranging the table view.
@@ -82,7 +82,15 @@ class TestTableViewController: UITableViewController {
     }
     */
 
-    /*
+    @IBAction func unwindToLitteratureTable(segue: UIStoryboardSegue){
+        let AddLitteratureViewController = segue.source as! AddLitteratureViewController
+       // if let pensum = AddLitteratureViewController.litterature {
+            //pensums.append(pensum)
+            //self.tableView.reloadData()
+       // }
+        
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -90,6 +98,6 @@ class TestTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

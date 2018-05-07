@@ -12,9 +12,6 @@ import FirebaseDatabase
 
 class Pensum: NSObject {
     
-   // var courseName: String?
-   // var teacherName: String?
-   // var pensumPages: Int?
     
     let ref: DatabaseReference?
     let courseName: String?

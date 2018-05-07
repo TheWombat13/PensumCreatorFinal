@@ -43,6 +43,7 @@ class AddPensumViewController: UIViewController {
         autoId?.child("courseName").setValue(courseTextField.text)
         autoId?.child("teacherName").setValue(teacherTextField.text)
         autoId?.child("pensumPages").setValue(pagesTextField.text)
+        autoId?.child("litterature").setValue(0)
       
         presentingViewController?.dismiss(animated: true, completion: nil)
     }
