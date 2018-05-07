@@ -23,10 +23,10 @@ class PensumTableViewController: UITableViewController {
         fetchPensums()
         
     }
-
+    
     
     func fetchPensums() {
-        ref.observe(.childAdded, with: { snapshot in
+        ref.observe(.value, with: { snapshot in
         var newPensums: [Pensum] = []
         
         for child in snapshot.children {

@@ -62,7 +62,7 @@ class LoginViewController: UIViewController {
             Auth.auth().signIn(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) { (user, error) in
                 if error == nil {
                     print("du er nu logged ind")
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "PensumTableView")
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "NavigationController")
                     self.present(vc!, animated: true, completion: nil)
                 } else {
                     let alertController = UIAlertController(title: "Fejl", message: error?.localizedDescription, preferredStyle: .alert)
@@ -90,7 +90,7 @@ class LoginViewController: UIViewController {
                 if error == nil{
                     print("Du har nu oprettet en bruger")
                     
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "PensumTableView")
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "NavigationController")
                     self.present(vc!, animated: true, completion: nil)
                 } else {
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
