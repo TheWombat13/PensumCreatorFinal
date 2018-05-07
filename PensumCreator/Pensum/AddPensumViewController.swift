@@ -26,8 +26,7 @@ class AddPensumViewController: UIViewController {
         super.viewDidLoad()
         print("HEJ")
         ref = Database.database().reference()
-        //self.ref?.child("Pensums")
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -60,12 +59,12 @@ class AddPensumViewController: UIViewController {
      
         if sender as? UIBarButtonItem == doneButton {
             if !((courseTextField.text?.isEmpty)!) && !(teacherTextField.text?.isEmpty)! && !(pagesTextField.text?.isEmpty)! {
-                pensum = Pensum(courseName: courseTextField.text!, teacherName: teacherTextField.text!, pensumPages: pagesTextField.text!, completed: true)
+                pensum = Pensum(courseName: courseTextField.text!, teacherName: teacherTextField.text!, pensumPages: pagesTextField.text!)
             }
         }
     }
     
-    
+ 
  
 
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-import Foundation
+import FirebaseDatabase
 
 class Pensum: NSObject {
     
@@ -16,40 +16,36 @@ class Pensum: NSObject {
    // var teacherName: String?
    // var pensumPages: Int?
     
-    let courseName: String
-    let teacherName: String
-    let pensumPages: String
-    var completed: Bool
+    let ref: DatabaseReference?
+    let courseName: String?
+    let teacherName: String?
+    let pensumPages: String?
     
-    
-    init(courseName: String, teacherName: String, pensumPages: String, completed: Bool) {
+    //Constructor for instantiating a new object
+    init(courseName: String, teacherName: String, pensumPages: String) {
+        self.ref = nil
         self.courseName = courseName
         self.teacherName = teacherName
         self.pensumPages = pensumPages
-        self.completed = completed
     }
     
+    //Constructor for instantiating an object from FireBase
     init?(snapshot: DataSnapshot) {
-        guard
-        let snapshotValue = snapshot.value as? [String: AnyObject],
-            let courseName = snapshotValue["courseName"] as? String,
-            let teacherName = snapshotValue["teacherName"] as? String,
-            let pensumPages = snapshotValue["pensumPages"] as? String,
-            let completed = snapshotValue["completed"] as? Bool else {
-            return nil
+            let snapshotValue = snapshot.value as! [String: AnyObject]
+            self.courseName = snapshotValue["courseName"] as? String
+            self.teacherName = snapshotValue["teacherName"] as? String
+            self.pensumPages = snapshotValue["pensumPages"] as? String
+            self.ref = snapshot.ref
+ 
     }
-        self.courseName = courseName
-        self.teacherName = teacherName
-        self.pensumPages = pensumPages
-        self.completed = completed
-    }
+
     
     func toAnyObject() -> Any {
         return [
             "courseName": courseName,
             "teacherName": teacherName,
             "pensumPages": pensumPages,
-            "completed": completed
+
         ]
 
 }
