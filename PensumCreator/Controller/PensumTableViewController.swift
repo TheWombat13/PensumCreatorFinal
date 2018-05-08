@@ -16,6 +16,7 @@ class PensumTableViewController: UITableViewController {
     weak var currentUser = Auth.auth().currentUser
     //var pensums = [Pensum]()
     var pensums: [Pensum] = []
+    var pensumKeys: [String] = []
     let ref = Database.database().reference(withPath: "Pensums")
 
     override func viewDidLoad() {
@@ -32,12 +33,14 @@ class PensumTableViewController: UITableViewController {
         for child in snapshot.children {
             if let snapshot = child as? DataSnapshot,
                 let pensum = Pensum(snapshot: snapshot) {
+                let pensumKey = snapshot.key
+                print("PensumKey: \(pensumKey)")
                 newPensums.append(pensum)
             }
         }
         self.pensums = newPensums
         self.tableView.reloadData()
-            print(snapshot)
+            //print(snapshot)
         })
     }
  
@@ -55,8 +58,12 @@ class PensumTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        
         return pensums.count
     }
+    
+
+    
     
     @IBAction func unwindToPensumTable(segue: UIStoryboardSegue){
         let AddPensumViewController = segue.source as! AddPensumViewController
@@ -65,6 +72,12 @@ class PensumTableViewController: UITableViewController {
             self.tableView.reloadData()
         }
 
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //print("section: \(indexPath.section)")
+        print("row: \(indexPath.row)")
+        
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {

@@ -16,14 +16,14 @@ class Litterature: NSObject {
     let periodName: String?
     let genreName: String?
     let textName: String?
-    let litteraturePages: String?
+    let pagesNS: Int?
     
-    init(periodName: String, genreName: String, textName: String, litteraturePages: String) {
+    init(periodName: String, genreName: String, textName: String, pagesNS: Int) {
         self.ref = nil
         self.periodName = periodName
         self.genreName = genreName
         self.textName = textName
-        self.litteraturePages = litteraturePages
+        self.pagesNS = pagesNS
     }
     
     init?(snapshot: DataSnapshot) {
@@ -31,7 +31,7 @@ class Litterature: NSObject {
         self.periodName = snapshotValue["periodeName"] as? String
         self.genreName = snapshotValue["genreName"] as? String
         self.textName = snapshotValue["textName"] as? String
-        self.litteraturePages = snapshotValue["litteraturePages"] as? String
+        self.pagesNS = snapshotValue["pagesNS"] as? Int
         self.ref = snapshot.ref
     }
     
@@ -40,7 +40,7 @@ class Litterature: NSObject {
             "periodeName": periodName,
             "genreName": genreName,
             "textName": textName,
-            "litteraturePages": litteraturePages
+            "pagesNS": pagesNS
         ]
     }
 }

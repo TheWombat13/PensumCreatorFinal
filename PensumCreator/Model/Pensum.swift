@@ -17,6 +17,7 @@ class Pensum: NSObject {
     let courseName: String?
     let teacherName: String?
     let pensumPages: String?
+
     
     //Constructor for instantiating a new object
     init(courseName: String, teacherName: String, pensumPages: String) {
@@ -33,7 +34,6 @@ class Pensum: NSObject {
             self.teacherName = snapshotValue["teacherName"] as? String
             self.pensumPages = snapshotValue["pensumPages"] as? String
             self.ref = snapshot.ref
- 
     }
 
     
@@ -42,9 +42,7 @@ class Pensum: NSObject {
             "courseName": courseName,
             "teacherName": teacherName,
             "pensumPages": pensumPages,
-
         ]
-
-}
+    }
 }
 

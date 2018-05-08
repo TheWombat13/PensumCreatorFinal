@@ -31,15 +31,23 @@ class AddPensumViewController: UIViewController {
     }
     
     @IBAction func addPensum(_ sender: Any) {
+        if courseTextField.text == "" {
+            let alertController = UIAlertController(title: "Advarsel", message: "Udfyld venligst Kursusnavn", preferredStyle: .alert)
+            let defaltAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaltAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+        } else {
         //defines a random key to hold the pensum variables
         let autoId = ref?.child("Pensums").childByAutoId()
         
         autoId?.child("courseName").setValue(courseTextField.text)
         autoId?.child("teacherName").setValue(teacherTextField.text)
         autoId?.child("pensumPages").setValue(pagesTextField.text)
-        autoId?.child("litterature").setValue(0)
+        autoId?.child("litteratureList").childByAutoId()
       
         presentingViewController?.dismiss(animated: true, completion: nil)
+        }
     }
 
     // MARK: - Navigation
