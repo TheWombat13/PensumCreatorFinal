@@ -63,6 +63,13 @@ class LitteratureTableViewController: UITableViewController {
         return litteratureList.count
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let litterature = litteratureList[indexPath.row]
+            litterature.ref?.removeValue()
+        }
+    }
+    
     
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
      let cell = tableView.dequeueReusableCell(withIdentifier: "LitteratureTableViewCustomCell", for: indexPath)

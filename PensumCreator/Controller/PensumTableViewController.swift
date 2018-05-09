@@ -93,11 +93,35 @@ class PensumTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let pensum = pensums[indexPath.row]
-            pensum.ref?.removeValue()
+            let alertController = UIAlertController(title: "Warning", message: "Are you sure?", preferredStyle: .alert)
+            
+            let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { (action) in
+                self.tableView.deleteRows(at: [indexPath], with: .fade)
+            })
+            alertController.addAction(deleteAction)
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+            alertController.addAction(cancelAction)
+            
+            present(alertController, animated: true, completion: nil)
         }
     }
+  /*
+    var refreshAlert = UIAlertController(title: "Log Out", message: "Are You Sure to Log Out ? ", preferredStyle: UIAlertControllerStyle.Alert)
     
+    refreshAlert.addAction(UIAlertAction(title: "Confirm", style: .Default, handler: { (action: UIAlertAction!) in
+    self.navigationController?.popToRootViewControllerAnimated(true)
+    }))
+    
+    refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in
+    
+    refreshAlert .dismissViewControllerAnimated(true, completion: nil)
+    
+    
+    }))
+    
+    presentViewController(refreshAlert, animated: true, completion: nil)
+   */
     
     //Custom cell loader
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

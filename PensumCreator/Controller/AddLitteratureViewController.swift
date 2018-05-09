@@ -64,6 +64,7 @@ class AddLitteratureViewController: UIViewController {
     
     @IBAction func addLitterature(_ sender: AnyObject) {
         
+        //Alerts to check for correct inputs
         if periodTextField.text == "" || signsTextField.text == "" || linesTextField.text == ""
             || pagesToTextField.text == "" || pagesFromTextField.text == ""{
             let alertController = UIAlertController(title: "Advarsel", message: "Udfyld venligst periode og sideinformationer", preferredStyle: .alert)
@@ -73,13 +74,14 @@ class AddLitteratureViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         } else {
             
-            
+            //Transforms the textFileds to integers
             let signsTextfieldInt: Int! = Int(signsTextField.text!)
             let linesTextfieldInt: Int! = Int(linesTextField.text!)
             let pagesFromTextfieldInt: Int! = Int(pagesFromTextField.text!)
             let pagesToTextfieldInt: Int! = Int(pagesToTextField.text!)
             let pagesNS = ((signsTextfieldInt * linesTextfieldInt) / 2400) * (pagesToTextfieldInt - pagesFromTextfieldInt + 1)
             
+            //Saves the data on the Firebase by the defined paths
             if let pensumKey = pensumKey {
             let autoId = ref?.child("Pensums").child(pensumKey).child("litteratureList").childByAutoId()
             autoId?.child("periodName").setValue(periodTextField.text)
@@ -87,20 +89,11 @@ class AddLitteratureViewController: UIViewController {
             autoId?.child("textName").setValue(TextTextField.text)
             autoId?.child("pagesNS").setValue(pagesNS)
             }
+            //Defines when the unwind segue should run so the data will be stored in the database
+            //before unwinding
             self.performSegue(withIdentifier: "unwindToLitteratureTable", sender: self)
-            //presentingViewController?.dismiss(animated: true, completion: nil)
+            
         }
     }
     
-
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    
-
 }
