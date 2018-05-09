@@ -83,7 +83,6 @@ class PensumTableViewController: UITableViewController {
             pensums.append(pensum)
             self.tableView.reloadData()
         }
-
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

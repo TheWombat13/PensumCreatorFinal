@@ -21,12 +21,6 @@ class LitteratureTableViewController: UITableViewController {
             print("Pensum key: \(pensumKey)")
         }
         fetchLitterature()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     
@@ -125,16 +119,15 @@ class LitteratureTableViewController: UITableViewController {
      return true
      }
      */
-    
-   // @IBAction func unwindToLitteratureTable(segue: UIStoryboardSegue){
-     //   let AddLitteratureViewController = segue.source as! AddLitteratureViewController
-        // if let pensum = AddLitteratureViewController.litterature {
-        //pensums.append(pensum)
-        //self.tableView.reloadData()
-        // }
-        
-    //}
-    
+  
+    @IBAction func unwindToLitteratureTable(segue: UIStoryboardSegue){
+        let AddLitteratureViewController = segue.source as! AddLitteratureViewController
+         if let litterature = AddLitteratureViewController.litterature {
+        litteratureList.append(litterature)
+        self.tableView.reloadData()
+         }
+    }
+   
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation

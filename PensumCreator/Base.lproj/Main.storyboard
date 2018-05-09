@@ -165,7 +165,6 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="RNp-Ae-Zak">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="addButtonDidTouch:" destination="u6g-ja-MDc" id="szO-17-dqJ"/>
                                 <segue destination="Ri3-0f-STM" kind="presentation" id="YaO-dw-JHz"/>
                             </connections>
                         </barButtonItem>
@@ -205,7 +204,7 @@
                     <navigationItem key="navigationItem" title="Værker" id="Asp-eE-4Tj">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="NCL-GL-ilv">
                             <connections>
-                                <segue destination="mx1-aA-h24" kind="presentation" id="uf5-SD-R2G"/>
+                                <segue destination="nds-mn-apz" kind="show" identifier="toAddLitterature" id="OIw-Da-ra1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -267,26 +266,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Otz-un-lGN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3504.8000000000002" y="78.710644677661179"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Rcb-nR-QgL">
-            <objects>
-                <navigationController id="mx1-aA-h24" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qUL-Un-eGY">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.211869061" green="0.35319983960000001" blue="0.6521241069" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="nds-mn-apz" kind="relationship" relationship="rootViewController" id="MH4-mt-Bt8"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="isH-HZ-BAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2670" y="825"/>
         </scene>
         <!--Tilføj værker-->
         <scene sceneID="OLq-a7-jDD">
@@ -421,14 +400,10 @@
                         <viewLayoutGuide key="safeArea" id="cwW-6Y-qmI"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tilføj værker" id="wM8-qe-ydn">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="PAO-KP-OnS">
-                            <connections>
-                                <segue destination="UZ4-Mu-uTE" kind="unwind" unwindAction="unwindToLitteratureTableWithSegue:" id="Cie-Ht-Xee"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="Ayj-HA-zwf">
                             <connections>
                                 <action selector="addLitterature:" destination="nds-mn-apz" id="V0r-nD-iFn"/>
+                                <segue destination="UZ4-Mu-uTE" kind="unwind" unwindAction="unwindToLitteratureTableWithSegue:" id="tdd-fZ-VGi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -446,7 +421,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LkX-IM-rEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="UZ4-Mu-uTE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3504.8000000000002" y="823.53823088455783"/>
+            <point key="canvasLocation" x="2662" y="824"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pOq-a5-e5t">
