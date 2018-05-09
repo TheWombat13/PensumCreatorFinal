@@ -48,7 +48,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    
+    weak var currentUser: User?
     
     @IBAction func login() {
           print("login")
@@ -103,18 +103,4 @@ class LoginViewController: UIViewController {
             }
         }
     }
-    
-    @IBAction func signOut(){
-        if Auth.auth().currentUser != nil {
-            do {
-                try Auth.auth().signOut()
-                let vc = UIStoryboard(name: "PensumTableView", bundle: nil).instantiateViewController(withIdentifier: "Login")
-                present(vc, animated: true, completion: nil)
-            } catch let error as NSError {
-                print(error.localizedDescription)
-            }
-        }
-    }
-   
-
 }

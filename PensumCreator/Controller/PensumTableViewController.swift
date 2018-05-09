@@ -124,5 +124,19 @@ class PensumTableViewController: UITableViewController {
         return cell
     }
     
+//    @IBAction func signOut(){
+//        if Auth.auth().currentUser != nil {
+//            do {
+//                try Auth.auth().signOut()
+//                let vc = UIStoryboard(name: "PensumTableViewController", bundle: nil).instantiateViewController(withIdentifier: "Login")
+//                present(vc, animated: true, completion: nil)
+//            } catch let error as NSError {
+//                print(error.localizedDescription)
+//            }
+//        }
+//    }
+    
+    
+    
 
 }
