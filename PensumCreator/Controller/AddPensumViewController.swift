@@ -17,8 +17,10 @@ class AddPensumViewController: UIViewController {
     
     @IBOutlet weak var doneButton: UIBarButtonItem!
     
+    var pensumKey: String?
     var ref: DatabaseReference?
     var pensum: Pensum?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

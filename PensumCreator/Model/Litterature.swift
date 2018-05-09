@@ -40,7 +40,7 @@ class Litterature: NSObject {
             "periodeName": periodName,
             "genreName": genreName,
             "textName": textName,
-            "pagesNS": pagesNS
+            "pagesNS": pagesNS,
         ]
     }
 }

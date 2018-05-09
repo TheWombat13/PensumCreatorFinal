@@ -149,7 +149,7 @@
                                     <outlet property="courseLabel" destination="GTk-pm-xjX" id="irO-Qq-UDa"/>
                                     <outlet property="pagesLabel" destination="Xlp-Fs-5JY" id="IxO-jw-pep"/>
                                     <outlet property="teacherLabel" destination="Dql-Xh-dVb" id="KPv-0X-98p"/>
-                                    <segue destination="tq1-ee-5zv" kind="show" id="uMM-cy-cIF"/>
+                                    <segue destination="tq1-ee-5zv" kind="show" identifier="toLitteratureList" id="uMM-cy-cIF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -179,13 +179,13 @@
         <!--Værker-->
         <scene sceneID="wNj-UB-nSP">
             <objects>
-                <tableViewController id="tq1-ee-5zv" customClass="LitteratureTableViewController" customModule="PensumCreator" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="toLitteratureList" id="tq1-ee-5zv" customClass="LitteratureTableViewController" customModule="PensumCreator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="c5X-IS-1xh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qhY-am-EyG">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LitteratureTableViewCustomCell" id="qhY-am-EyG">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qhY-am-EyG" id="064-UV-Vre">
@@ -291,7 +291,7 @@
         <!--Tilføj værker-->
         <scene sceneID="OLq-a7-jDD">
             <objects>
-                <viewController id="nds-mn-apz" customClass="AddLitteratureViewController" customModule="PensumCreator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="toAddLitterature" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nds-mn-apz" customClass="AddLitteratureViewController" customModule="PensumCreator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KQv-wL-g7c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -406,7 +406,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="countPagesWithPagesNS:" destination="nds-mn-apz" eventType="touchUpInside" id="rda-a2-myR"/>
+                                    <action selector="countPages:" destination="nds-mn-apz" eventType="touchUpInside" id="3fr-CJ-FOU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Normalsider" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbY-Hk-KvG">

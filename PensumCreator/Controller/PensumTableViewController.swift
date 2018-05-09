@@ -29,18 +29,21 @@ class PensumTableViewController: UITableViewController {
     func fetchPensums() {
         ref.observe(.value, with: { snapshot in
         var newPensums: [Pensum] = []
+        var newPensumKeys: [String] = []
         
         for child in snapshot.children {
             if let snapshot = child as? DataSnapshot,
                 let pensum = Pensum(snapshot: snapshot) {
                 let pensumKey = snapshot.key
                 print("PensumKey: \(pensumKey)")
+                newPensumKeys.append(pensumKey)
                 newPensums.append(pensum)
             }
         }
         self.pensums = newPensums
+        self.pensumKeys = newPensumKeys
         self.tableView.reloadData()
-            //print(snapshot)
+            print(snapshot)
         })
     }
  
@@ -62,6 +65,15 @@ class PensumTableViewController: UITableViewController {
         return pensums.count
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if  (segue.identifier == "toLitteratureList") {
+            let litteratureTVC = segue.destination as! LitteratureTableViewController
+            if let selectionIndex = tableView.indexPathForSelectedRow {
+                litteratureTVC.pensumKey = pensumKeys[selectionIndex.row]
+            }
+        }
+    }
+    
 
     
     
@@ -76,7 +88,7 @@ class PensumTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //print("section: \(indexPath.section)")
-        print("row: \(indexPath.row)")
+        //print("row: \(indexPath.row)")
         
     }
     
