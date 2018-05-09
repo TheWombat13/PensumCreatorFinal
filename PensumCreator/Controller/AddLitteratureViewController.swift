@@ -87,7 +87,8 @@ class AddLitteratureViewController: UIViewController {
             autoId?.child("textName").setValue(TextTextField.text)
             autoId?.child("pagesNS").setValue(pagesNS)
             }
-            presentingViewController?.dismiss(animated: true, completion: nil)
+            self.performSegue(withIdentifier: "unwindToLitteratureTable", sender: self)
+            //presentingViewController?.dismiss(animated: true, completion: nil)
         }
     }
     

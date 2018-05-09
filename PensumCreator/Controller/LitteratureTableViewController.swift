@@ -75,7 +75,7 @@ class LitteratureTableViewController: UITableViewController {
      return cell
      }
     
-    
+  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("før")
         if  (segue.identifier == "toAddLitterature") {
@@ -119,7 +119,7 @@ class LitteratureTableViewController: UITableViewController {
      return true
      }
      */
-  
+ 
     @IBAction func unwindToLitteratureTable(segue: UIStoryboardSegue){
         let AddLitteratureViewController = segue.source as! AddLitteratureViewController
          if let litterature = AddLitteratureViewController.litterature {

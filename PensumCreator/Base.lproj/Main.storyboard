@@ -403,7 +403,6 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="Ayj-HA-zwf">
                             <connections>
                                 <action selector="addLitterature:" destination="nds-mn-apz" id="V0r-nD-iFn"/>
-                                <segue destination="UZ4-Mu-uTE" kind="unwind" unwindAction="unwindToLitteratureTableWithSegue:" id="tdd-fZ-VGi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -416,6 +415,7 @@
                         <outlet property="pagesToTextField" destination="aBV-ei-nD2" id="mk2-gG-x6d"/>
                         <outlet property="periodTextField" destination="zWB-zt-w7l" id="ltn-C9-2bl"/>
                         <outlet property="signsTextField" destination="cd3-Kc-Ms2" id="6XQ-8y-BBP"/>
+                        <segue destination="UZ4-Mu-uTE" kind="unwind" identifier="unwindToLitteratureTable" unwindAction="unwindToLitteratureTableWithSegue:" id="hR4-BS-URT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LkX-IM-rEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
