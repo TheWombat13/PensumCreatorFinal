@@ -19,7 +19,8 @@ class AddLitteratureViewController: UIViewController {
     @IBOutlet weak var pagesFromTextField: UITextField!
     @IBOutlet weak var pagesToTextField: UITextField!
     @IBOutlet weak var pagesNSLabel: UILabel!
-   
+    @IBOutlet weak var doneButton: UIBarButtonItem!
+    
     var pagesNS: Int?
     var ref: DatabaseReference?
     var litterature: Litterature?
@@ -79,7 +80,7 @@ class AddLitteratureViewController: UIViewController {
             let linesTextfieldInt: Int! = Int(linesTextField.text!)
             let pagesFromTextfieldInt: Int! = Int(pagesFromTextField.text!)
             let pagesToTextfieldInt: Int! = Int(pagesToTextField.text!)
-            let pagesNS = ((signsTextfieldInt * linesTextfieldInt) / 2400) * (pagesToTextfieldInt - pagesFromTextfieldInt + 1)
+            pagesNS = ((signsTextfieldInt * linesTextfieldInt) / 2400) * (pagesToTextfieldInt - pagesFromTextfieldInt + 1)
             
             //Saves the data on the Firebase by the defined paths
             if let pensumKey = pensumKey {
@@ -96,4 +97,17 @@ class AddLitteratureViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        if sender as? UIBarButtonItem == doneButton {
+            print("Jeg virker")
+            if !((periodTextField.text?.isEmpty)!) && !(genreTextField.text?.isEmpty)! && !(TextTextField.text?.isEmpty)! {
+                litterature = Litterature(periodName: periodTextField.text!, genreName: genreTextField.text!, textName: TextTextField.text!, pagesNS: pagesNS!)
+            }
+        }
+    }
+    
+
 }

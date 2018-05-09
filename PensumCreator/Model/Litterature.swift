@@ -28,7 +28,7 @@ class Litterature: NSObject {
     
     init?(snapshot: DataSnapshot) {
         let snapshotValue = snapshot.value as! [String: AnyObject]
-        self.periodName = snapshotValue["periodeName"] as? String
+        self.periodName = snapshotValue["periodName"] as? String
         self.genreName = snapshotValue["genreName"] as? String
         self.textName = snapshotValue["textName"] as? String
         self.pagesNS = snapshotValue["pagesNS"] as? Int
@@ -37,10 +37,10 @@ class Litterature: NSObject {
     
     func toAnyObject() -> Any {
         return [
-            "periodeName": periodName,
-            "genreName": genreName,
-            "textName": textName,
-            "pagesNS": pagesNS,
+            "periodName": periodName!,
+            "genreName": genreName!,
+            "textName": textName!,
+            "pagesNS": pagesNS!,
         ]
     }
 }
