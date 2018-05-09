@@ -96,12 +96,9 @@ class PensumTableViewController: UITableViewController {
         if editingStyle == .delete {
             //Warning for deletion of a pensum
             let alertController = UIAlertController(title: "Advarsen", message: "Du er ved at slette et pensum med alle underliggende værker", preferredStyle: .alert)
- 
             let cancelAction = UIAlertAction(title: "Afbryd", style: .default, handler: nil)
             alertController.addAction(cancelAction)
-            
             present(alertController, animated: true, completion: nil)
-            
             let deleteAction = UIAlertAction(title: "Slet", style: .destructive, handler: { (action) in
                 let pensum = self.pensums[indexPath.row]
                 pensum.ref?.removeValue()

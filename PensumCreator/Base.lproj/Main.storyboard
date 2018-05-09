@@ -229,10 +229,10 @@
             </objects>
             <point key="canvasLocation" x="2662" y="79"/>
         </scene>
-        <!--Detail Litterature View Controller-->
+        <!--Værk detaljer-->
         <scene sceneID="Dnx-6y-LpG">
             <objects>
-                <viewController id="UYC-gh-DvM" customClass="DetailLitteratureViewController" customModule="PensumCreator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Værk detaljer" id="UYC-gh-DvM" customClass="DetailLitteratureViewController" customModule="PensumCreator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="crD-Ee-jzs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -439,7 +439,7 @@
                         <viewLayoutGuide key="safeArea" id="cwW-6Y-qmI"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tilføj værker" id="wM8-qe-ydn">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Ayj-HA-zwf">
+                        <barButtonItem key="rightBarButtonItem" title="Gem" id="Ayj-HA-zwf">
                             <connections>
                                 <action selector="addLitterature:" destination="nds-mn-apz" id="V0r-nD-iFn"/>
                             </connections>
@@ -544,7 +544,7 @@
                                 <segue destination="tk2-SW-quL" kind="unwind" unwindAction="unwindToPensumTableWithSegue:" id="mRn-93-fdC"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="U06-zN-2Ep">
+                        <barButtonItem key="rightBarButtonItem" title="Gem" id="U06-zN-2Ep">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="addPensum:" destination="HcJ-Tb-igR" id="dtO-0Z-buD"/>
