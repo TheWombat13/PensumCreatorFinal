@@ -28,7 +28,7 @@ class AddLitteratureViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Hej")
+        
         if let pensumKey = pensumKey {
             print("Pensum key: \(pensumKey)")
         }
@@ -38,6 +38,12 @@ class AddLitteratureViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    //Allows the user to tap anywhere to hide keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
     }
     
     @IBAction func countPages(_ sender: AnyObject) {
